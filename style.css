@@ -1,0 +1,194 @@
+html, body {
+  height: 1075px;
+  background-image: url("images/bg.jpg");
+  
+}
+
+#container {
+  width: 760px;
+  height: 515px;
+  padding: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-48%, 0%);
+  flex-wrap: nowrap; /* ✅ ไม่ให้ขึ้นบรรทัดใหม่ */
+}
+
+.me {
+  position: relative;
+  background-size: 720px 515px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 2.2px;
+  margin-top: -0.5px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.2s;
+}
+
+.full {
+  height: 450px;
+  width: 720px;
+  border-radius: 15px;
+}
+
+.me_0  { width: 120px; height: 150px; background-position: -0px -0px; }
+.me_1  { width: 120px; height: 150px; background-position: -120px -0px; }
+.me_2  { width: 120px; height: 150px; background-position: -240px -0px; }
+.me_3  { width: 120px; height: 150px; background-position: -360px -0px; }
+.me_4  { width: 120px; height: 150px; background-position: -480px -0px; }
+.me_5  { width: 120px; height: 150px; background-position: -600px -0px; }
+
+.me_6  { width: 120px; height: 150px; background-position: -0px -150px; }
+.me_7  { width: 120px; height: 150px; background-position: -120px -150px; }
+.me_8  { width: 120px; height: 150px; background-position: -240px -150px; }
+.me_9  { width: 120px; height: 150px; background-position: -360px -150px; }
+.me_10 { width: 120px; height: 150px; background-position: -480px -150px; }
+.me_11 { width: 120px; height: 150px; background-position: -600px -150px; }
+
+.me_12 { width: 120px; height: 150px; background-position: -0px -300px; }
+.me_13 { width: 120px; height: 150px; background-position: -120px -300px; }
+.me_14 { width: 120px; height: 150px; background-position: -240px -300px; }
+.me_15 { width: 120px; height: 150px; background-position: -360px -300px; }
+.me_16 { width: 120px; height: 150px; background-position: -480px -300px; }
+.me_17 { width: 120px; height: 150px; background-position: -600px -300px; }
+
+.prevent_click {
+  pointer-events: none;
+}
+
+.correct {
+  border-radius: 0px;
+  box-shadow: 0 0 0 transparent, 0 0 0 transparent;
+  animation: corect 0.5s ease;
+  animation-delay: 0.2s;
+}
+
+@keyframes corect {
+  0% {
+    transform: scale(1);
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  50% {
+    transform: scale(1.25);
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 0px;
+    box-shadow: 0 0 0 transparent, 0 0 0 transparent;
+  }
+}
+.pre_img {
+  margin-top: 10px;
+  width: 100%;
+  position: absolute;
+  left: 100px;
+}
+
+.pre_img li {
+  display: inline-block;
+  list-style: none;
+}
+
+.pre_img li img {
+  width: 150px;
+  height: 75px;
+  position: relative;
+  cursor: pointer;
+}
+
+.cover {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.38);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.score {
+  margin: 13% auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 350px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+#scr_head {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: cursive;
+  color: #3d3d3d;
+}
+
+#scr_time {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: cursive;
+  color: #3d3d3d;
+}
+
+#scr_moves {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: cursive;
+  color: #3d3d3d;
+}
+
+.start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px 45px;
+}
+
+.reset {
+  position: absolute;
+  margin: 0 auto;
+  padding: 18px 45px;
+  left: 50%;
+  transform: translate(-50%, 195px);
+}
+
+.OK {
+  padding: 8px 25px;
+  float: right;
+  cursor: pointer;
+}
+
+.button {
+  margin: 0px 10px 10px 0px;
+  border-radius: 10px;
+  font-family: cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #b16ad7;
+  border-bottom: 5px solid #c16eeb;
+  text-shadow: 0px -2px #c16eeb;
+  z-index: 999;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.button:active {
+  border-bottom: 1px solid #c16eeb;
+}
+
+.i {
+  text-align: center;
+  font-family: cursive;
+  font-weight: 550;
+  color: #3c3c3c;
+}
